@@ -3,11 +3,12 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import {HomesComponent} from "./components/homes/homes.component";
 import {HeaderComponent} from "./components/header/header.component";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
-    declarations: [AppComponent, HomesComponent, HeaderComponent]
+    imports: [RouterTestingModule, HttpClientTestingModule],
+    declarations: [AppComponent, HomesComponent, HeaderComponent],
   }));
 
   it('should create the app', () => {

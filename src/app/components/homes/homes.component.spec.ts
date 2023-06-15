@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomesComponent } from './homes.component';
 import { DataServiceService } from '../../services/data-service.service';
 import { of } from 'rxjs';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('HomesComponent', () => {
   let component: HomesComponent;
@@ -11,6 +12,7 @@ describe('HomesComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [HomesComponent],
+      imports: [HttpClientTestingModule],
       providers: [
         {
           provide: DataServiceService,
@@ -60,3 +62,4 @@ describe('HomesComponent', () => {
     });
   });
 });
+

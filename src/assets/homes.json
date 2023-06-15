@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Home 1",
+    "location": "new york"
+  },
+  {
+    "id": 2,
+    "title": "Home 2",
+    "location": "rome"
+  },
+  {
+    "id": 3,
+    "title": "Home 3",
+    "location": "stuttgart"
+  }
+]
