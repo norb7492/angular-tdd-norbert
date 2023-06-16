@@ -60,6 +60,17 @@ describe('HomesComponent', () => {
       expect(home.querySelector('[data-test="id"]').innerText).toEqual('1');
       expect(home.querySelector('[data-test="title"]').innerText).toEqual('Home 1');
     });
+
+    it('should change text on button click', () => {
+      expect(fixture.nativeElement.querySelector('[data-test="text-change"]').innerText).toEqual('first text');
+
+      const button = fixture.debugElement.nativeElement.querySelector('button');
+      button.click();
+
+      fixture.detectChanges();
+
+      expect(fixture.nativeElement.querySelector('[data-test="text-change"]').innerText).toEqual('second text');
+    });
   });
 });
 

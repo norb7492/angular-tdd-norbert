@@ -8,6 +8,7 @@ import {DataServiceService} from "../../services/data-service.service";
   styleUrls: ['./homes.component.scss']
 })
 export class HomesComponent implements OnInit {
+  public valueToChange = 'first text';
 
   public homes$: Observable<any> = new Observable<any>;
 
@@ -18,4 +19,7 @@ export class HomesComponent implements OnInit {
     this.homes$ = this.dataService.getHomes$();
   }
 
+  public changeText(): void {
+    this.valueToChange = 'second text';
+  }
 }
